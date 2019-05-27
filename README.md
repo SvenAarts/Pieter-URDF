@@ -4,6 +4,8 @@ to use this URDF package the Scout Greenhouse project group made for their AGV y
 
 ```
 cd catkin_ws/src
-catkin_create_pkg pieter
+git clone https://github.com/SvenAarts/pieter.git
 
+cd ..
+catkin_make
 ``` 
