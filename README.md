@@ -8,5 +8,6 @@ git clone https://github.com/SvenAarts/pieter.git
 
 cd ..
 catkin_make
-``` 
 roslaunch pieter display.launch
+``` 
+
