@@ -1,0 +1,277 @@
+<robot
+  name="pieter">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.11528" />
+      <inertia
+        ixx="2.7212E-05"
+        ixy="-4.1994E-08"
+        ixz="-3.177E-10"
+        iyy="3.8126E-05"
+        iyz="-1.8674E-07"
+        izz="6.5335E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.18824 0.46667 0.31765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+
+
+  <link
+    name="left_axle">
+    <inertial>
+      <origin
+        xyz="0.31506 2.498E-15 -2.1372E-15"
+        rpy="0 0 0" />
+      <mass
+        value="2.3051" />
+      <inertia
+        ixx="2.6807E-29"
+        ixy="2.2447E-16"
+        ixz="-1.9519E-16"
+        iyy="0.0059169"
+        iyz="-4.237E-33"
+        izz="0.0059169" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/left_axle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/left_axle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_axis"
+    type="continuous">
+    <origin
+      xyz="0.075 -0.232 0.0167"
+      rpy="0 -7.4113E-17 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_axle" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+
+
+
+
+
+
+  <link
+    name="right_axle">
+    <inertial>
+      <origin
+        xyz="0.31506 2.3183E-14 2.584E-14"
+        rpy="0 0 0" />
+      <mass
+        value="2.3051" />
+      <inertia
+        ixx="2.6833E-29"
+        ixy="-2.2457E-16"
+        ixz="-1.9586E-16"
+        iyy="0.0059169"
+        iyz="-2.1684E-19"
+        izz="0.0059169" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/right_axle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/right_axle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_axis"
+    type="continuous">
+    <origin
+      xyz="0.075 0.225 0.0167"
+      rpy="3.1415 6.123E-17 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_axle" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+
+
+
+
+
+
+  <link
+    name="front_axle">
+    <inertial>
+      <origin
+        xyz="0.0078 -5.1903E-15 -2.0983E-14"
+        rpy="0 0 1.5708" />
+      <mass
+        value="2.4793" />
+      <inertia
+        ixx="7.3229E-30"
+        ixy="-9.591E-16"
+        ixz="9.6339E-18"
+        iyy="0.13818"
+        iyz="0"
+        izz="0.13818" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/front_axle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/front_axle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_axis"
+    type="continuous">
+    <origin
+      xyz="-0.462 0 0.0167"
+      rpy="0 4.358E-17 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_axle" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+
+
+
+
+
+
+  <link
+    name="rear_axle">
+    <inertial>
+      <origin
+        xyz="0.0078 1.4755E-13 5.8675E-14"
+        rpy="0 0 0" />
+      <mass
+        value="2.4793" />
+      <inertia
+        ixx="7.2394E-30"
+        ixy="-9.5E-16"
+        ixz="-4.6934E-18"
+        iyy="0.13818"
+        iyz="1.3334E-34"
+        izz="0.13818" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/rear_axle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pieter/meshes/rear_axle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_axis"
+    type="continuous">
+    <origin
+      xyz="0.6125 0 0.0167"
+      rpy="0 4.358E-17 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_axle" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>
