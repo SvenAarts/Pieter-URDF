@@ -4,7 +4,7 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 00"
         rpy="0 0 0" />
       <mass
         value="0.11528" />
@@ -18,7 +18,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.0733"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -61,7 +61,7 @@
         izz="0.0059169" />
     </inertial>
     <visual>
-      <origin
+      <origin0
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
@@ -86,16 +86,16 @@
   </link>
   <joint
     name="left_axis"
-    type="continuous">
+    type="fixed">
     <origin
-      xyz="0.075 -0.232 0.0167"
+      xyz="0.075 -0.232 0.09"
       rpy="0 -7.4113E-17 0" />
     <parent
       link="base_link" />
     <child
       link="left_axle" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 1 0" />
   </joint>
 
 
@@ -122,7 +122,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 0 0" />0
       <geometry>
         <mesh
           filename="package://pieter/meshes/right_axle.STL" />
@@ -145,16 +145,16 @@
   </link>
   <joint
     name="right_axis"
-    type="continuous">
+    type="fixed">
     <origin
-      xyz="0.075 0.225 0.0167"
+      xyz="0.075 0.225 0.09"
       rpy="3.1415 6.123E-17 0" />
     <parent
       link="base_link" />
     <child
       link="right_axle" />
     <axis
-      xyz="-1 0 0" />
+      xyz="0 -1 0" />
   </joint>
 
 
@@ -204,9 +204,9 @@
   </link>
   <joint
     name="front_axis"
-    type="continuous">
+    type="fixed">
     <origin
-      xyz="-0.462 0 0.0167"
+      xyz="-0.462 0 0.09"
       rpy="0 4.358E-17 1.5708" />
     <parent
       link="base_link" />
@@ -263,9 +263,9 @@
   </link>
   <joint
     name="rear_axis"
-    type="continuous">
+    type="fixed">
     <origin
-      xyz="0.6125 0 0.0167"
+      xyz="0.6125 0 0.09"
       rpy="0 4.358E-17 1.5708" />
     <parent
       link="base_link" />
